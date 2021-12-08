@@ -5,7 +5,7 @@ client.connect();
 
 function myDBBuilder() {
   const myDB = {};
-  const DB_NAME = "health_manager";
+  const DB_NAME = "health_manager_advanced";
 
   myDB.create = (collectionName, documentObject) => {
     client
