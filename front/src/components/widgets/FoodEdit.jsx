@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React, { useState, useContext } from "react";
 import { UserContext } from "../pages/FoodInfoDietPlanPage";
 
@@ -83,5 +83,10 @@ function FoodEdit(props) {
     </form>
   );
 }
+
+FoodEdit.propTypes = {
+  foodItems: PropTypes.array,
+  setFoodItems: PropTypes.func,
+};
 
 export default FoodEdit;

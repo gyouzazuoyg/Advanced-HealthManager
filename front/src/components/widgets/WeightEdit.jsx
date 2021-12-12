@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React, { useState, useContext } from "react";
 import { UserContext } from "../pages/WeightPage";
 
@@ -86,5 +86,10 @@ function WeightEdit(props) {
     </form>
   );
 }
+
+WeightEdit.propTypes = {
+  weightRecords: PropTypes.array,
+  setWeightRecords: PropTypes.func,
+};
 
 export default WeightEdit;

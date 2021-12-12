@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
+import PropTypes from "prop-types";
 import React from "react";
 import FoodEdit from "../widgets/FoodEdit";
 import FoodList from "../widgets/FoodList";
@@ -24,5 +23,12 @@ function FoodSection(props) {
     </>
   );
 }
+
+FoodSection.propTypes = {
+  foodItems: PropTypes.array,
+  setFoodItems: PropTypes.func,
+  dietItems: PropTypes.array,
+  setDietItems: PropTypes.func,
+};
 
 export default FoodSection;

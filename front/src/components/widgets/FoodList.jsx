@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { UserContext } from "../pages/FoodInfoDietPlanPage";
@@ -76,6 +76,13 @@ const FoodList = (props) => {
       </div>
     </div>
   ));
+};
+
+FoodList.propTypes = {
+  foodItems: PropTypes.array,
+  setFoodItems: PropTypes.func,
+  dietItems: PropTypes.array,
+  setDietItems: PropTypes.func,
 };
 
 export default FoodList;

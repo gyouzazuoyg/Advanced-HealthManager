@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from "react";
 import FunctionNavbar from "../widgets/FunctionNavbar";
 import WeightChartSection from "../sections/WeightChartSection";

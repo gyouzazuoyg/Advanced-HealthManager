@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/App.css";
+import "./css/List.css";
 import "./css/Navbar.css";
 import RegistrationPage from "./components/pages/RegistrationPage";
 import LoginPage from "./components/pages/LoginPage";

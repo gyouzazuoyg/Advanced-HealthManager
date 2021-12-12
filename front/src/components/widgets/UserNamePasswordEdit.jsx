@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -104,5 +104,9 @@ function UserNamePasswordEdit(props) {
     </form>
   );
 }
+
+UserNamePasswordEdit.propTypes = {
+  status: PropTypes.string,
+};
 
 export default UserNamePasswordEdit;

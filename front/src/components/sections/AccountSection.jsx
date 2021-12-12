@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
+import PropTypes from "prop-types";
 import React from "react";
 import UserNamePasswordEdit from "../widgets/UserNamePasswordEdit";
 
@@ -11,5 +10,9 @@ function AccountSection(props) {
     </div>
   );
 }
+
+AccountSection.propTypes = {
+  status: PropTypes.string,
+};
 
 export default AccountSection;

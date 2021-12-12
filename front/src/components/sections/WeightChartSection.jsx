@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
+import PropTypes from "prop-types";
 import React from "react";
 import WeightChart from "../widgets/WeightChart";
 import WeightEdit from "../widgets/WeightEdit";
@@ -19,5 +18,10 @@ function WeightChartSection(props) {
     </>
   );
 }
+
+WeightChartSection.propTypes = {
+  weightRecords: PropTypes.array,
+  setWeightRecords: PropTypes.func,
+};
 
 export default WeightChartSection;
