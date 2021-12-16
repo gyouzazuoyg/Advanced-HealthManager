@@ -12,8 +12,8 @@
   ### Visit the page using the url: localhost:3000
 
 ## Author: 
-Zhenghao Lin
-Yanan Dong
+- Zhenghao Lin
+- Yanan Dong
 
 ## Project Objective:
 - Improve accessibility and usability
