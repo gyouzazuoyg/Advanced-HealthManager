@@ -33,3 +33,6 @@
   - [Home Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/homepage.jpg?raw=true)
   - [Diet Plan Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/diet_plan.jpg?raw=true)
   - [Weight Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/weight.jpg?raw=true)
+
+# Usability Study Report
+  - [Link](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/usability%20study%20report.docx?raw=true)
