@@ -1,3 +1,11 @@
+# Code Review -> Matthew
+* I used the website, and the password section isn't a password field, and it shows the password text which is not common.   Might want to fix that in the future to hide the characters
+* You have used alerts for when actions are completed, which isn't good user experience.
+* Can there be two users with the same information?  I just registered a username twice
+* I like the dashboard page colors, it's really vibrant and clean
+* Is it intentional I can add weights from the past?  I assume it was cause it's not a problem if that's the case
+* Is there a way to logout?  It's not clear, and if there is no way to log out there probably should be
+
 # Website Link (Deployed on Heroku):
   - [Link](https://health-manager-project4.herokuapp.com/)
 
