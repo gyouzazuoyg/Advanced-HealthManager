@@ -10,3 +10,24 @@
     - cd ./front
     - npm run start
   ### Visit the page using the url: localhost:3000
+
+## Author: 
+Zhenghao Lin
+Yanan Dong
+
+## Project Objective:
+- Improve accessibility and usability
+- Improve web design
+
+## Class Link: 
+[Web Development CS5610 2021 Fall](https://johnguerra.co/classes/webDevelopment_fall_2021/)
+
+# Slide:
+  - [Link]
+
+# Demontration Video:
+  - [Link]
+
+# Screen Shot
+  - [Diet Plan Page]
+  - [Weight Page]
