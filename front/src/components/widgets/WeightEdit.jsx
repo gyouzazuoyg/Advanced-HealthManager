@@ -16,12 +16,26 @@ function WeightEdit(props) {
       !weightRecordObject.record_date ||
       /^\s*$/.test(weightRecordObject.record_date)
     ) {
+      alert("Weight Record Date is Not Given!");
       return;
+    }
+    if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(weightRecordObject.record_date)) {
+      alert("Weight Record Date is of Wrong Format!");
+      return false;
     }
     if (
       !weightRecordObject.weight_value ||
       /^\s*$/.test(weightRecordObject.weight_value)
     ) {
+      alert("Weight Record Value is Not Given!");
+      return;
+    }
+    if (!/^\d+$/.test(weightRecordObject.weight_value)) {
+      alert("Weight Record Value Should Contain Numbers Only!");
+      return;
+    }
+    if (Number(weightRecordObject.weight_value) <= 0) {
+      alert("Weight Record Value Should be Greater Than Zero!");
       return;
     }
 
@@ -66,14 +80,14 @@ function WeightEdit(props) {
     <form onSubmit={handleSubmit} className="food-form">
       <>
         <input
-          placeholder="Enter Date Here"
+          placeholder="Enter Date Here - Format: mm/dd/yyyy"
           value={inputDate}
           onChange={handleRecordDateChange}
           name="text"
           className="foodname-input"
         />
         <input
-          placeholder="Enter Weight Here"
+          placeholder="Enter Weight Here (lbs)"
           value={inputWeight}
           onChange={handleWeightValueChange}
           name="text"

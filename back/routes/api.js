@@ -66,15 +66,8 @@ router.post("/create_user", async function (req, res) {
 
 router.post("/login", async function (req, res) {
   const userName = await req.body.userName;
-  const password = await req.body.password;
-  await userDB.login(userName, password).then((result) => {
-    if (result) {
-      console.log("Logged In!");
-      res.status(200).json({ flag: true });
-    } else {
-      console.log("Failed to login!");
-      res.status(200).json({ flag: false });
-    }
+  userDB.login(userName, (accountInfoObj) => {
+    res.status(200).json(accountInfoObj);
   });
 });
 

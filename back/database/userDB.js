@@ -35,12 +35,11 @@ function userDBBuilder() {
     });
   };
 
-  userDB.login = async (userName, password) => {
+  userDB.login = async (userName, funcCallback) => {
     const FILTER = {
       userName: userName,
-      password: password,
     };
-    return myDB.isExisting(COLLECTION_NAME, FILTER);
+    return myDB.retrieveAll(COLLECTION_NAME, FILTER, funcCallback);
   };
 
   return userDB;

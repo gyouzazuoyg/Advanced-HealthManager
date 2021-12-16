@@ -13,12 +13,17 @@ function FoodEdit(props) {
   const addFood = (foodInfoObject) => {
     // Skip if empty or only containing spaces
     if (!foodInfoObject.foodName || /^\s*$/.test(foodInfoObject.foodName)) {
+      alert("Food Name is Not Given!");
       return;
     }
     if (
       !foodInfoObject.calorieOunce ||
       /^\s*$/.test(foodInfoObject.calorieOunce)
     ) {
+      alert("Food Calorie is Not Given!");
+    }
+    if (!/^\d+$/.test(foodInfoObject.calorieOunce)) {
+      alert("Calorie Should Contain Numbers Only!");
       return;
     }
 

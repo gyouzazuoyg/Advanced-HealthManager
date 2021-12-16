@@ -43,7 +43,13 @@ const DietList = (props) => {
               onClick={() => {
                 removeDietItem(dietItem[0], index);
               }}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  removeDietItem(dietItem[0], index);
+                }
+              }}
               className="delete-icon"
+              tabIndex="0"
             />
           </div>
         </div>

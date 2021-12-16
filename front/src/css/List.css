@@ -18,11 +18,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  padding-left: 32px;
   width: 520px;
   min-height: 600px;
   background: #161a2b;
-  text-align: center;
-  margin: 128px auto;
+  text-align: left;
+  margin: 60px auto;
   border-radius: 10px;
   padding-bottom: 32px;
 }
@@ -36,6 +37,8 @@ body {
   background: #161a2b;
   text-align: center;
   margin: 128px auto;
+  padding-left: 64px;
+  padding-right: 64px;
   border-radius: 10px;
   padding-bottom: 32px;
 }
@@ -43,7 +46,7 @@ body {
 .web-page {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   min-width: 1080px;
 }
 
@@ -57,6 +60,12 @@ h2 {
   margin: 16px 0;
   color: #fff;
   font-size: 18px;
+}
+
+.description {
+  margin: 16px 0;
+  color: #fff;
+  font-size: 14px;
 }
 
 .complete {
@@ -73,7 +82,7 @@ h2 {
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;
   outline: none;
-  width: 320px;
+  width: calc(100% - 32px);
   background: transparent;
   color: #fff;
 }
@@ -83,11 +92,9 @@ h2 {
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;
   outline: none;
-  width: 320px;
+  width: calc(100% - 32px - 100px);
   background: transparent;
   color: #fff;
-  margin-left: 56px;
-  float: left;
 }
 
 .weight-input {
@@ -95,11 +102,9 @@ h2 {
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;
   outline: none;
-  width: 320px;
+  width: calc(100% - 32px - 100px);
   background: transparent;
   color: #fff;
-  margin-left: 50px;
-  float: left;
 }
 
 .food-input::placeholder {
@@ -108,10 +113,10 @@ h2 {
 
 .food-button {
   padding: 16px;
+  width: 100px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-  outline: none;
   background: linear-gradient(
     90deg,
     rgba(93, 12, 255, 1) 0%,
@@ -127,7 +132,6 @@ h2 {
   border: none;
   border-radius: 4px 4px 4px 4px;
   cursor: pointer;
-  outline: none;
   background: linear-gradient(
     90deg,
     rgba(93, 12, 255, 1) 0%,
@@ -135,6 +139,7 @@ h2 {
   );
   color: #fff;
   text-transform: capitalize;
+  font-size: larger;
 }
 
 .food-input.edit {
@@ -157,10 +162,10 @@ h2 {
 }
 
 .food-row {
+  margin-bottom: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
   color: #fff;
   background: linear-gradient(
     90deg,
@@ -170,11 +175,16 @@ h2 {
 
   padding: 16px;
   border-radius: 5px;
-  width: 90%;
+  width: calc(100% - 32px);
 }
 
 .food_info {
   float: left;
+}
+
+.food_info_clickable {
+  float: left;
+  cursor: pointer;
 }
 
 .food-row:nth-child(4n + 1) {
@@ -210,9 +220,5 @@ h2 {
 
 .delete-icon {
   margin-right: 5px;
-  color: #fff;
-}
-
-.edit-icon {
   color: #fff;
 }

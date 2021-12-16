@@ -45,24 +45,21 @@ const FoodList = (props) => {
 
   return foodItems.map((foodItem, index) => (
     <div className="food-row" key={index}>
-      <div key={index}>
-        <div
-          className="food_info"
-          onClick={() => {
+      <div
+        key={index}
+        tabIndex="0"
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
             addDietItem(foodItem[0], foodItem[1]);
-          }}
-        >
-          Food Name: {foodItem[0]}
-        </div>
+          }
+        }}
+        onClick={() => {
+          addDietItem(foodItem[0], foodItem[1]);
+        }}
+      >
+        <div className="food_info_clickable">Food Name: {foodItem[0]}</div>
         <br />
-        <div
-          className="food_info"
-          onClick={() => {
-            addDietItem(foodItem[0], foodItem[1]);
-          }}
-        >
-          Calorie Per Ounce: {foodItem[1]}
-        </div>
+        <div className="food_info_clickable">Calorie Per Ounce: {foodItem[1]}</div>
       </div>
 
       {/* Delete Icon */}
@@ -71,7 +68,13 @@ const FoodList = (props) => {
           onClick={() => {
             removeFood(foodItem[0], index);
           }}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              removeFood(foodItem[0], index);
+            }
+          }}
           className="delete-icon"
+          tabIndex="0"
         />
       </div>
     </div>

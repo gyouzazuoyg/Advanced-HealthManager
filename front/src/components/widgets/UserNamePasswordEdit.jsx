@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+const bcrypt = require("bcryptjs");
 
 function UserNamePasswordEdit(props) {
   const [inputUserName, setInputUserName] = useState("");
@@ -14,12 +15,19 @@ function UserNamePasswordEdit(props) {
   const register = (accountInfoObj) => {
     // Skip if empty or only containing spaces
     if (!accountInfoObj.userName || /^\s*$/.test(accountInfoObj.userName)) {
+      alert("User Name is Not Given!");
       return;
     }
     if (!accountInfoObj.password || /^\s*$/.test(accountInfoObj.password)) {
+      alert("Password is Not Given!");
       return;
     }
 
+    let salt = bcrypt.genSaltSync(10);
+    let hash = bcrypt.hashSync(accountInfoObj.password, salt);
+    accountInfoObj.password = hash;
+
+    alert("Registration Completed!");
     fetch("/api/create_user", {
       method: "POST",
       headers: {
@@ -32,9 +40,11 @@ function UserNamePasswordEdit(props) {
   const login = async (accountInfoObj) => {
     // Skip if empty or only containing spaces
     if (!accountInfoObj.userName || /^\s*$/.test(accountInfoObj.userName)) {
+      alert("User Name is Not Given!");
       return;
     }
     if (!accountInfoObj.password || /^\s*$/.test(accountInfoObj.password)) {
+      alert("Password is Not Given!");
       return;
     }
 
@@ -43,15 +53,26 @@ function UserNamePasswordEdit(props) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(accountInfoObj),
+      body: JSON.stringify({ userName: accountInfoObj.userName }),
     });
     let resultObj = await result.json();
-    if (resultObj.flag) {
+    var isOk = false;
+    if (resultObj.length !== 0) {
+      isOk = bcrypt.compareSync(
+        accountInfoObj.password,
+        resultObj[0].password
+      );
+    } else {
+      alert("User Not Found!");
+      return;
+    }
+    if (isOk) {
       localStorage.clear();
       localStorage.setItem("user", accountInfoObj.userName);
+      alert("Successfully Logged in!");
       navigate("/diet_plan");
     } else {
-      // failed
+      alert("Wrong Password!");
     }
   };
 

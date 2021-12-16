@@ -11,6 +11,7 @@ function WeightChartSection(props) {
         weightRecords={props.weightRecords}
         setWeightRecords={props.setWeightRecords}
       />
+      <h2>Data is Shown in Recording Order</h2>
       <WeightChart
         weightRecords={props.weightRecords}
         setWeightRecords={props.setWeightRecords}
