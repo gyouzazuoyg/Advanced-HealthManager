@@ -29,5 +29,6 @@ Yanan Dong
   - [Link]
 
 # Screen Shot
-  - [Diet Plan Page]
-  - [Weight Page]
+  - [Home Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/homepage.jpg?raw=true)
+  - [Diet Plan Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/diet_plan.jpg?raw=true)
+  - [Weight Page](https://github.com/gyouzazuoyg/Advanced-HealthManager/blob/main/weight.jpg?raw=true)
