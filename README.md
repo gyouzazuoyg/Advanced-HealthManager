@@ -23,7 +23,7 @@
 [Web Development CS5610 2021 Fall](https://johnguerra.co/classes/webDevelopment_fall_2021/)
 
 # Slide:
-  - [Link]
+  - [Link](https://docs.google.com/presentation/d/1NEtZmMmDOgWJO5agvsGOjbxH5NfS0Dfq2HD1CE3MK2M/edit?usp=sharing)
 
 # Demontration Video:
   - [Improvement from Project3](https://youtu.be/jYC30CNmQVY)
