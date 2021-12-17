@@ -1,24 +1,11 @@
+<!--Yuanyuan: It will be better if you can have some screen shoot of the website with titles or brief description-->
 # Website Link (Deployed on Heroku):
   - [Link](https://health-manager-project4.herokuapp.com/)
 
 # Run the back end and front end separately to run the project locally:
   ### How to run the back end
     - (uri file is not uploaded for safely reason, so MongoDB connection is required to be modified)
-    - cd ./back
-    - npm run start
-  ### How to run the front end
-    - cd ./front
-    - npm run start
-  ### Visit the page using the url: localhost:3000
-
-## Author: 
-- Zhenghao Lin
-- Yanan Dong
-
-## Project Objective:
-- Improve accessibility and usability
-- Improve web design
-
+    - cd ./back0
 ## Class Link: 
 [Web Development CS5610 2021 Fall](https://johnguerra.co/classes/webDevelopment_fall_2021/)
 
