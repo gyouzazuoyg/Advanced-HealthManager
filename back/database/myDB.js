@@ -3,6 +3,8 @@ const uri = require("./uri");
 var client = new MongoClient(uri, { useUnifiedTopology: true });
 client.connect();
 
+// Yuanyuan: It is good that you seperate db part for different features instead of putting all of them into one file.
+// Yuanyuan: This leads your codes become easy to follow and read. Good job!
 function myDBBuilder() {
   const myDB = {};
   const DB_NAME = "health_manager_advanced";
