@@ -5,6 +5,7 @@ import FunctionNavbar from "../widgets/FunctionNavbar";
 
 export const UserContext = React.createContext("");
 
+// Yuanyuan: It is impressive that you have such detailed components, such as foot section and diet section. This definitely increase the reusability and readability of your codes.
 function FoodInfoDietPlanPage() {
   let user = localStorage.getItem("user");
   const [foodItems, setFoodItems] = useState([]);
